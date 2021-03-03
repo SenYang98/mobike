@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="摩拜单车永不倒毕">
+    <title>Mobile</title>
+    <!--标题前面的小icon-->
+    <link rel="shortcut icon" href="https://mobike.com/global/favicon.ico" type="image/x-icon">
+    <!--加载入css、js-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+</head>
+<body>
+    <!--第一屏-->
+    <div class="header-wrap">
+        <!--轮播图-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-bg" style="background-image: url(https://mobike.com/global/public/MOBIKEMOVEMENT1.jpg);"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-bg" style="background-image: url(https://mobike.com/global/public/MobikeEasy.JPG);"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-bg" style="background-image: url(https://mobike.com/global/public/hero.jpg);"></div>
+                </div>
+            </div>
+
+        </div>
+
+    <!--logo导航模块-->
+        <div class="global-navigation-wrap">
+            <div class="container-md clearfix"><!--clearfix清除塌陷-->
+            <!--logo-->
+            <div class="logo-links">
+                <a href="#">
+                    <img class="navigation__logo__image navigation__logo__image--normal" src="https://mobike.com/global/public/header_logo_white.png" alt="标识">
+                </a>
+            </div>
+            
+
+            <!--导航-nav-->
+            <ul class="nav-links">
+                <li>
+                    <a class="nav-links-product" href="javascript:;">产品</a>
+                    <div class="nav-links-layer"></div>
+                </li>
+                <li><a href="#">摩拜科技</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">广告合作</a></li>
+            </ul>
+            <!--手机导航nav-->
+            <ul class="nav-links-mobile"></ul>
+
+            </div>
+        </div>
+        <!--文字模块-->
+        <div class="hero-landing">
+            <div class="container-md">
+                <h1 class="hero-txt">让自行车回归城市</h1>
+                <a class="hero-btn" href="#">立即开始使用mobike</a>
+            </div>
+        </div>
+            <!--新闻模块-->
+        <div class="news-wrap">
+            <div class="container-md">
+                <span>NEWS</span>
+                下载MOBIKE应用程序，创建您的帐户并轻松扫描即可解锁并乘坐！
+            </div>
+        </div>
+    </div>
+    <!--第一屏-->
+    <div class="hero-wrap">
+        <div class="hero-product" style="background-image: url(https://mobike.com/global/public/mobikelead1.jpg );">
+            <h3>大国品牌</h3>
+        </div>
+        <div class="hero-product" style="background-image: url(https://mobike.com/global/public/Zaragozalaunch.jpg);">
+            <h3>大国品牌</h3>
+        </div>
+        <div class="hero-product" style="background-image: url(https://mobike.com/global/public/hannoverlead.jpg);">
+            <h3>大国品牌</h3>
+        </div>
+        <div class="hero-product" style="background-image: url(https://mobike.com/global/public/hospitalet.jpg );">
+            <h3>大国品牌</h3>
+        </div>
+
+    </div>
+
+
+    
+<script src="C:\Users\ys129\Desktop\mobike\js\swiper-bundle.min.js"></script>
+<script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+
+      loop: true, // 循环模式选项
+    //自动切换
+    autoplay:{
+        delay:3000,//延迟时间
+        //这个意思是用户操作之后不可用，true为不可以继续换图
+        //disableOnInteraction:false,才可以在鼠标控制滑动之后每隔两秒换一张图
+        disableOnInteraction:false,
+
+    },
+         //轮播切换-淡入淡出
+         effect : 'fade',
+
+})
+</script>
+</body>
+</html>

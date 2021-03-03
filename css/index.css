@@ -1,0 +1,190 @@
+/*版心公用*/
+.container-md{
+    width: 1080px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /*background-color: rgb(250, 231, 231);*/
+}
+
+/*下面参数一个都不能少*/
+
+html,
+body,
+.header-wrap,
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide,
+.hero-bg{
+    width: 100%;
+    height: 100%;
+}
+/*背景图片比较大，所以要使其居中，大小适应屏幕，背景尺寸*/
+.hero-bg{
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+
+}
+.header-wrap{
+    position: relative;
+}
+
+/* logo */
+.global-navigation-wrap{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1vmax;/*v是视口大小*/
+    padding-bottom: 1vmax;/*v是视口大小，
+    viewport的缩写
+    vw：视窗宽度的百分比（1vw 代表视窗的宽度为 1%）
+    vh：视窗高度的百分比
+    vmin：当前 vw 和 vh 中较小的一个值
+    vmax：当前 vw 和 vh 中较大的一个值*/
+}
+img{
+    max-width: 40%;
+    max-height: 40%;
+}
+.logo-links{
+    float: left;
+    display: inline;
+}
+/*nav*/
+.nav-links{
+    float: right;
+}
+.nav-links li{
+    position: relative;
+    float: left;
+    line-height: 40px;
+    font-size: 16px;
+    
+}
+.nav-links li a{
+    font-weight: 1000;
+    font-family: Din,Open Sans,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,sans-serif;
+    color: rgb(17, 8, 1);
+    padding: 8px 20px;/*让a的鼠标点击区域变大一点*/
+    display: block;
+}
+.nav-links-layer{
+    display: none;
+    position: absolute;
+    top: 70px;;
+    left:0;
+    width: 240px;
+    height: 204px;
+    padding-top: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+.nav-links-layer::before{
+    position: absolute;
+    top: -20px;
+    left: 42px;
+    content :"";
+    display: block;
+    width:0;
+    border-width:10px 10px 10px 10px;
+    border-style:solid solid solid solid;
+    border-color:transparent transparent rgb(255, 255, 255) transparent;
+}
+.nav-links li:hover .nav-links-layer{
+    display: block;
+}
+/*文字模块*/
+.hero-landing{
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 146%;
+    margin-top: -73px;
+    animation: color 6s ease infinite;
+}
+.hero-txt{
+    margin-bottom: 20px;
+    font-size: 420%;
+
+}
+/*解决出现中间灰色太明显的情况
+1.白色-透明-灰色-透明
+2.中间设置多个关键帧
+3.两个切换颜色的关键帧间隔尽可能少一点*/
+@keyframes color{
+    0%{color: #fff;}
+
+    50%{color: #fff;}
+    51%{color: #000;}
+
+    100%{color: #000;}
+}
+.hero-btn{
+    color: #fff;
+    padding:14px 26px;
+    font-size: 22px;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 4px;
+}
+/*新闻*/
+.news-wrap{
+    /*为了不被遮盖提高层级*/
+    z-index: 99;
+    /*若果有文字就不用height*/
+    /*height: 20px;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0, .4);
+    padding:10px 0;
+    color: #fff;
+    font-size: 16px;
+}
+.news-wrap span{
+    /*线性渐变 （to bottom方位，color1，color2）*/
+    background: linear-gradient(to bottom,#ec614f 0%,#ff2e2e 100%);
+    border-radius: 4px;
+    padding:0 10px;
+}
+.hero-wrap{
+    margin-left: -2px;
+    margin-top: 2px;
+}
+.hero-product{
+    border-left:2px solid #fff;
+    float: left;
+    width: 25%;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*注意：图片间的间距只用把padding和border计算进去 千万不要用margin去写*/
+    box-sizing: border-box;
+
+}
+.hero-wrap h3{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding-top: 90px;
+
+}
+/*ＰＡＤ*/
+@media screen and (max-width:1080px){
+    .container-md{width: 100%;}
+    .nav-links{display: none;}
+    .hero-product{width: 50%;margin-bottom: 2px;}
+}
+/*手机端*/
+/*and前后必须空格，不空格不显示效果*/
+@media screen and (max-width:640px){
+    .hero-product{width: 100%;}
+    .meta-link{width: 100%;padding: 15px;}
+    /*分组选择器*/
+    .meta-link:nth-child(2),.meta-link:nth-child(3){text-align: left;}
+}
